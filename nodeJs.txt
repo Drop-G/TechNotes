@@ -1,0 +1,20 @@
+
+Node.JS -
+As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.
+In the following "hello world" example, many connections can be handled concurrently.
+Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.
+
+This is in contrast to today's more common concurrency model, in which OS threads are employed. 
+Thread-based networking is relatively inefficient and very difficult to use. 
+Furthermore, users of Node.js are free from worries of dead-locking the process, since there are no locks. 
+Almost no function in Node.js directly performs Input/Output, so the process never blocks. 
+Because nothing blocks, scalable systems are very reasonable to develop in Node.js.
+
+A callback is a function called at the completion of a given task; 
+this prevents any blocking, and allows other code to be run in the meantime.
+
+Chromes V8 Engine -
+V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. 
+It is used in Chrome and in Node.js, among others. 
+It implements ECMAScript and WebAssembly, and runs on Windows 7 or later, macOS 10.12+, and Linux systems that use x64, IA-32, ARM, or MIPS processors. 
+V8 can run standalone, or can be embedded into any C++ application.
