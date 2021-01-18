@@ -22,7 +22,7 @@ Index - An index is one way of providing quicker access to data. Indices can be 
 Queries that filter using those attributes can find matching tuples directly using the index (similar to Hash table lookup), without having to check each tuple in turn.
 
 ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-Non-relational Databases -
+Non-relational Databases - 
 A NoSQL (originally referring to "non-SQL" or "non-relational") database provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases.
 
 Key Value Store - Key–value (KV) stores use the associative array (also called a map or dictionary) as their fundamental data model. 
