@@ -1,0 +1,46 @@
+Relationial Databases - 
+This model organizes data into one or more tables (or "relations") of columns and rows, with a unique key identifying each row. 
+Rows are also called records or tuples.[11] Columns are also called attributes. Generally, each table/relation represents one "entity type" (such as customer or product). 
+The rows represent instances of that type of entity (such as "Lee" or "chair") and the columns representing values attributed to that instance (such as address or price).
+
+A relation is defined as a set of tuples that have the same attributes. A tuple usually represents an object and information about that object. 
+Objects are typically physical objects or concepts. A relation is usually described as a table, which is organized into rows and columns. 
+All the data referenced by an attribute are in the same domain and conform to the same constraints.
+
+(key terms)
+
+Primary key - A primary key uniquely specifies a tuple within a table. 
+
+foriegn key - A foreign key is a field in a relational table that matches the primary key column of another table. It relates the two keys.
+
+Stored Procedures - A stored procedure is executable code that is associated with, and generally stored in, the database. 
+Stored procedures usually collect and customize common operations, like inserting a tuple into a relation, gathering statistical 
+information about usage patterns, or encapsulating complex business logic and calculations. Frequently they are used as an 
+application programming interface (API) for security or simplicity.
+
+Index - An index is one way of providing quicker access to data. Indices can be created on any combination of attributes on a relation. 
+Queries that filter using those attributes can find matching tuples directly using the index (similar to Hash table lookup), without having to check each tuple in turn.
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Non-relational Databases -
+A NoSQL (originally referring to "non-SQL" or "non-relational") database provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases.
+
+Key Value Store - Key–value (KV) stores use the associative array (also called a map or dictionary) as their fundamental data model. 
+In this model, data is represented as a collection of key–value pairs, such that each possible key appears at most once in the collection.
+
+Document Store - The central concept of a document store is that of a "document". While the details of this definition differ among document-oriented databases, 
+they all assume that documents encapsulate and encode data (or information) in some standard formats or encodings. Encodings in use include XML, YAML, and JSON and binary forms like BSON. 
+Documents are addressed in the database via a unique key that represents that document. Another defining characteristic of a document-oriented database is an API or query language to retrieve documents based on their contents.
+
+Different implementations offer different ways of organizing and/or grouping documents:
+
+Collections
+Tags
+Non-visible metadata
+Directory hierarchies
+
+Compared to relational databases, collections could be considered analogous to tables and documents analogous to records. 
+But they are different: every record in a table has the same sequence of fields, while documents in a collection may have fields that are completely different.
+
+Graph - Graph databases are designed for data whose relations are well represented as a graph consisting of elements connected by a finite number of relations. 
+Examples of data include social relations, public transport links, road maps, network topologies, etc.

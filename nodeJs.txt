@@ -13,8 +13,43 @@ Because nothing blocks, scalable systems are very reasonable to develop in Node.
 A callback is a function called at the completion of a given task; 
 this prevents any blocking, and allows other code to be run in the meantime.
 
+(concurrency and throughput)
+As an example, let's consider a case where each request to a web server takes 50ms to complete and 45ms of that 50ms is database I/O that can be done asynchronously. 
+Choosing non-blocking asynchronous operations frees up that 45ms per request to handle other requests. 
+This is a significant difference in capacity just by choosing to use non-blocking methods instead of blocking methods.
+
+(Will delete file before file is read)
+const fs = require('fs');
+fs.readFile('/file.md', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+fs.unlinkSync('/file.md');
+
+(Proper unblocking function)
+const fs = require('fs');
+fs.readFile('/file.md', (readFileErr, data) => {
+  if (readFileErr) throw readFileErr;
+  console.log(data);
+  fs.unlink('/file.md', (unlinkErr) => {
+    if (unlinkErr) throw unlinkErr;
+  });
+});
+
+________________________________________________________________________________________________________________________________
+
 Chromes V8 Engine -
 V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. 
 It is used in Chrome and in Node.js, among others. 
 It implements ECMAScript and WebAssembly, and runs on Windows 7 or later, macOS 10.12+, and Linux systems that use x64, IA-32, ARM, or MIPS processors. 
 V8 can run standalone, or can be embedded into any C++ application.
+
+V8 compiles and executes JavaScript source code, handles memory allocation for objects, and garbage collects objects it no longer needs. 
+V8’s stop-the-world, generational, accurate garbage collector is one of the keys to V8’s performance.
+
+JavaScript is commonly used for client-side scripting in a browser, being used to manipulate Document Object Model (DOM) objects for example. 
+The DOM is not, however, typically provided by the JavaScript engine but instead by a browser. The same is true of V8 — Google Chrome provides the DOM. 
+V8 does however provide all the data types, operators, objects and functions specified in the ECMA standard.
+
+V8 enables any C++ application to expose its own objects and functions to JavaScript code. 
+It’s up to you to decide on the objects and functions you would like to expose to JavaScript.
