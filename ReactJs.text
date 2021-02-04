@@ -2,15 +2,35 @@ React - Javascript library for building User Interfaces
 
 (Hooks)
 
-State - 
+useState: 
+const [state, setState] = useState(initialState);
 
-effects -
+Returns a stateful value, and a function to update it.
+During the initial render, the returned state (state) is the same as the value passed as the first argument (initialState).
+The setState function is used to update the state. It accepts a new state value and enqueues a re-render of the component.
 
-context -
- 
-custom hooks -
+setState:
+During subsequent re-renders, the first value returned by useState will always be the most recent state after applying updates.
 
-reducers -
+effects:
+The function passed to useEffect will run after the render is committed to the screen. 
+Think of effects as an escape hatch from React’s purely functional world into the imperative world.
+
+initialState:
+The initialState argument is the state used during the initial render. In subsequent renders, it is disregarded. 
+If the initial state is the result of an expensive computation, you may provide a function instead, which will be executed only on the initial render:
+
+
+context:
+Accepts a context object (the value returned from React.createContext) and returns the current context value for that context.
+The current context value is determined by the value prop of the nearest <MyContext.Provider> above the calling component in the tree.
+
+useReducer:
+An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method.
+(If you’re familiar with Redux, you already know how this works.)
+
+useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one.
+useReducer also lets you optimize performance for components that trigger deep updates because you can pass dispatch down instead of callbacks.
 
 
 

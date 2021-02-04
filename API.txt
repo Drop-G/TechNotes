@@ -1,0 +1,34 @@
+Open APIs: 
+Also known as Public API, there are no restrictions to access these types of APIs because they are publicly available.
+
+Partner APIs: 
+A developer needs specific rights or licenses in order to access this type of API because they are not available to the public.
+
+Internal APIs:
+Also known as Private APIs, only internal systems expose this type of API. These are usually designed for internal use within a company.
+The company uses this type of API among the different internal teams to be able to improve its products and services.
+
+Composite APIs: 
+This type of API combines different data and service APIs.
+It is a sequence of tasks that run synchronously as a result of the execution, and not at the request of a task. 
+Its main uses are to speed up the process of execution and improve the performance of the listeners in the web interfaces.
+
+Web Service API's:
+SOAP:
+SOAP (Simple Object Access Protocol) allows different connected devices that run Windows or Linux to communicate using XML. 
+The machines don’t need to use the same Operating System because they both understand the language of XML. 
+SOAP spent years dominating the online landscape but has cooled off in favor of REST in recent years.
+
+XML-RPC:
+RPC - (Remote Procedure Call)
+It's remote procedure calling using HTTP as the transport and XML as the encoding. 
+XML-RPC is designed to be as simple as possible, while allowing complex data structures to be transmitted, processed and returned.
+
+JSON-RPC:
+JSON-RPC is a remote procedure call protocol encoded in JSON. It is similar to the XML-RPC protocol, defining only a few data types and commands.
+JSON-RPC allows for notifications and for multiple calls to be sent to the server which may be answered asynchronously
+
+REST:(Representational State Transfer) 
+is a very popular Web Communication Service that powers 70% of the web currently. 
+Ultimately, REST is similar to SOAP in scope, but the way the two protocols approach the same solutions is very different. 
+Deciding which to utilize for a specific project can be a controversial decision for any programmer.
